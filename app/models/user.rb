@@ -11,6 +11,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
+  devise :omniauthable, omniauth_providers: [:github]
 
   def self.find_first_by_auth_conditions(warden_conditions)
 =begin
@@ -25,4 +26,29 @@ class User < ApplicationRecord
       where(conditions.to_hash).first
     end
   end
+
+=begin
+  def self.from_facebook(auth)
+
+    where(facebook_id: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.username = auth.info.name
+      user.password = Devise.friendly_token[0, 20]
+      user.skip_confirmation!
+    end
+  end
+=end
+
+  def self.from_github(auth)
+    puts "===="
+    puts auth.inspect
+    puts "===="
+    where(github_id: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.username = auth.info.name
+      user.password = Devise.friendly_token[0, 20]
+      user.skip_confirmation!
+    end
+  end
+
 end

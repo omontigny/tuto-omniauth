@@ -3,7 +3,13 @@
 <% if user_signed_in? %>
   <%= link_to 'Se Déconnecter', destroy_user_session_path, method: :delete %>
 <% else %>
-    <%= link_to 'Se connecter', new_user_session_path %>
-  <% end %>
+    <p><%#= link_to 'Se connecter', new_user_session_path %></p>
+
+       <p><%= link_to user_github_omniauth_authorize_path, class: "btn btn-block btn-social btn-github" do %>
+        <i class="fa fa-github"> Sign in with Github </i>
+        <% end %></p>
+
+    <p><%#= link_to 'Se connecter via OpenId', user_facebook_omniauth_authorize_path %></p>
+<% end %>
 
 

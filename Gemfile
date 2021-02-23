@@ -29,6 +29,13 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem "omniauth", '~> 1.9.1'
+gem 'omniauth-facebook', '~> 8.0'
+# gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+# gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem 'omniauth-github'
+# gem 'omniauth-openid'
+# gem 'keycloak'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
