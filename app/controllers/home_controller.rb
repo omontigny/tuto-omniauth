@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def private
   end
+
+  def dataprivacy
+  end
 end
