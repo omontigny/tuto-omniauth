@@ -276,7 +276,7 @@ Devise.setup do |config|
   # FACEBOOK
   # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'user,public_repo'
   # KEYCLOAK OPENID
-  config.omniauth :keycloak_openid, "vanilla", "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJiNDg5ZTlmNS01MTc4LTRiODItODJjMS1hOTU1NmQzYmE5ODUifQ.eyJleHAiOjE2MTQyOTg5ODAsImlhdCI6MTYxNDEyNjE4MCwianRpIjoiYTRiZDRlNTMtZGIzZC00Yzc3LWJlN2YtYjdmYTQ5M2YzOWQ3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL215cmVhbG0iLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC9yZWFsbXMvbXlyZWFsbSIsInR5cCI6IkluaXRpYWxBY2Nlc3NUb2tlbiJ9.H3xHZQbftKPcTl6xMUh3B59JfaphzTz8t1YZittYPUg", client_options: { site: "http://localhost:8080/vanilla", realm: "myrealm" }, :strategy_class => OmniAuth::Strategies::KeycloakOpenId
+  config.omniauth :keycloak_openid, "vanilla", "", client_options: { site: "http://localhost:8080/vanilla", realm: "myrealm" }, :strategy_class => OmniAuth::Strategies::KeycloakOpenId
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
