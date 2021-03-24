@@ -1,6 +1,6 @@
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 
- * Deploy [Keycloak on Docker](https://www.keycloak.org/getting-started/getting-started-docker)
+ * Deploy [Keycloak on Docker](https://www.keycloak.org/getting-started/getting-started-docker)`docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:12.0.3`
  * Tuto Global omniauth with Graphikart
  [tuto Graphikart](https://grafikart.fr/tutoriels/devise-omniauth-859)
  * Gem Omniauth github
